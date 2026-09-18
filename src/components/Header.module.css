@@ -1,0 +1,173 @@
+/* Matches .global-navbar-v2 and .header-global from actual site CSS */
+.header {
+  background-color: var(--surface-01); /* #2d2f38 */
+  width: 100%;
+  position: fixed;
+  top: 36px; /* sits below the TopBanner */
+  left: 0;
+  z-index: 10000;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 5.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .inner { padding: 15px 2em; }
+}
+
+@media (max-width: 640px) {
+  .inner { padding: 12px 1em; gap: 12px; }
+}
+
+/* Left */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+/* Hamburger — matches .navbar-menu-v2 */
+.menuBtn {
+  background-color: var(--surface-0); /* #3c3f4c */
+  border-radius: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition: all 0.35s ease-in-out;
+}
+
+.menuBtnOpen {
+  background-color: var(--red-01);
+}
+
+.menuBtn:hover {
+  background-color: var(--surface-02);
+}
+
+/* Brand — matches .main-brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.35s ease-in-out;
+}
+
+.brand:hover {
+  transform: scale(0.95);
+}
+
+/* .image-hamburger */
+.hamburgerImg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
+/* .logo-primary */
+.logoImg {
+  height: 1.5rem;
+  width: auto;
+  display: block;
+}
+
+/* .image-bordm-font-logo */
+.logoTextImg {
+  height: 1.5rem;
+  width: auto;
+  display: block;
+}
+
+/* Center search */
+.center {
+  flex: 1;
+  max-width: 500px;
+}
+
+.searchWrap {
+  position: relative;
+}
+
+/* Matches .search-input from site CSS */
+.searchInput {
+  width: 100%;
+  border: 1.25px solid var(--surface-02);
+  background-color: var(--surface-0); /* #3c3f4c */
+  color: var(--text);
+  background-image: url('https://assets-global.website-files.com/650d3012c61d88c6395cfe59/651d460241e15dcce90c9f17_search.svg');
+  background-position: 8px center;
+  background-repeat: no-repeat;
+  background-size: 34px;
+  border-radius: 100px;
+  height: 50px;
+  padding-left: 50px;
+  padding-right: 16px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.searchInput::placeholder { color: var(--text-subdued); }
+
+.searchInput:focus {
+  border-color: var(--surface-03);
+  background-color: var(--surface-02);
+}
+
+/* Right */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  background-color: var(--surface-0);
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-subdued);
+  transition: all 0.35s ease-in-out;
+}
+
+.iconBtn:hover {
+  background-color: var(--surface-02);
+  color: var(--text);
+}
+
+/* Matches .button-01-primary */
+.subscribeBtn {
+  background-color: var(--red-01); /* #e7335e */
+  color: var(--text);
+  border-radius: 10px;
+  padding: 12.5px 20px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  white-space: nowrap;
+}
+
+.subscribeBtn:hover { background-color: var(--red-02); }
+
+@media (max-width: 640px) {
+  .center { display: none; }
+  .iconBtn { width: 34px; height: 34px; }
+}

@@ -1,0 +1,110 @@
+/* Matches .global-carousel / banner-announcement */
+.banner {
+  background-color: var(--surface-03); /* #040405 */
+  height: 36px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10001;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media (max-width: 1024px) { .inner { padding: 0 2em; } }
+@media (max-width: 640px) { .inner { padding: 0 1em; } }
+
+/* .left-arrow / .right-arrow */
+.arrow {
+  color: var(--text-subdued);
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 6px;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+
+.arrow:hover { color: var(--text); }
+
+@keyframes fadeBanner {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* .content-announcement */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  flex: 1;
+  justify-content: center;
+  overflow: hidden;
+  animation: fadeBanner 0.3s ease;
+}
+
+/* .text-03-tertiary-12px.regular */
+.text {
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .circle-4px separator */
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+/* .buttton-ghost-primary */
+.ctaLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* .image-streaming */
+.streamLogo {
+  height: 12px;
+  width: auto;
+  display: block;
+}
+
+/* .image-streaming.large */
+.streamLogoLarge {
+  height: 16px;
+}
+
+/* .carousel-announcements */
+.ctaText {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.ctaLink:hover .ctaText { color: var(--red-01); }
+
+@media (max-width: 640px) {
+  .text { max-width: 150px; }
+}

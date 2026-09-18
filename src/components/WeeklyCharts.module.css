@@ -1,0 +1,285 @@
+/* .section-primary-03.spacing-extra-50px */
+.section {
+  padding: 50px 0;
+  border-bottom: 1.25px solid var(--border);
+  background: var(--surface-01);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5.5em;
+}
+
+@media (max-width: 1024px) { .inner { padding: 0 2em; } }
+@media (max-width: 640px) { .inner { padding: 0 1em; } }
+
+/* .layout-left-right — header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .image-30px-square */
+.sectionIcon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* .h2-small */
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font-heading);
+}
+
+/* .layout-horizontal-parent — "Via Top Anime" link */
+.more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s;
+}
+
+.more:hover { color: var(--text); }
+
+/* .link-text-01 */
+.moreText {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+}
+
+/* .arrows.arrow-right */
+.moreArrow {
+  font-size: 13px;
+  color: var(--text-subdued);
+}
+
+/* .charts-container */
+.tableWrap {
+  background: var(--surface-01);
+  border-radius: 14px;
+  border: 1.25px solid var(--surface-03);
+  overflow: hidden;
+}
+
+.table { width: 100%; border-collapse: collapse; }
+
+/* .chart-heading — header row */
+.headRow th {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
+  text-align: left;
+  border-bottom: 1px solid var(--surface-03);
+  font-family: var(--font-body);
+}
+
+/* Combined rank+heading cell */
+.thRank {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  white-space: nowrap;
+}
+
+.headRankHash {
+  font-size: 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.headRankLabel {
+  font-size: 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.thWks  { width: 130px; }
+.thStudio  { width: 170px; }
+.thCreator { width: 170px; }
+.thScore   { width: 80px; text-align: right; }
+
+/* .mobile-hide — Wks, Studio, Creator columns hidden on mobile */
+@media (max-width: 900px) { .mobileHide { display: none; } }
+
+/* .layout-horizontal-child — each chart row */
+.row {
+  border-bottom: 1px solid rgba(4, 4, 5, 0.6);
+  transition: background 0.15s;
+}
+
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--surface-0); }
+
+.row td { padding: 10px 16px; vertical-align: middle; }
+
+/* rank cell: rank+arrow | thumb | title+eps */
+.tdRank { }
+
+.rankCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* .div-ranking: rank number + 12px arrow */
+.rankGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+/* .h3-small */
+.rankNum {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+/* .image-12px-square */
+.arrow {
+  width: 12px;
+  height: 12px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* .no-arrow — hidden but keeps space */
+.arrowHidden { visibility: hidden; }
+
+/* .image-50px-square.ranking-N — thumbnail (CSS bg not available; placeholder) */
+.thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background-color: var(--surface-0);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* .content-card.spacing-none */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* .text-01-primary-16px */
+.animeName {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
+  font-family: var(--font-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .layout-horizontal-child — EPs row */
+.epsRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* .text-02-secondary-14px.subdued.boxed */
+.epsLabel {
+  font-size: 14px;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  border: 1px solid var(--surface-0);
+  border-radius: 4px;
+  padding: 1px 5px;
+  line-height: 1.3;
+}
+
+/* .text-02-secondary-14px.subdued — EPs number */
+.epsNum {
+  font-size: 14px;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+}
+
+/* Wks cell */
+.tdWks { }
+
+/* .layout-horizontal-grandchild.fixed */
+.wksCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .text-01-primary-16px.subdued */
+.wksNum {
+  font-size: 16px;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* .text-04-bold.white.large */
+.medal { font-size: 18px; line-height: 1; }
+
+/* Studio / Creator */
+.tdStudio, .tdCreator {
+  font-size: 16px;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Score */
+.tdScore { text-align: right; }
+
+/* .div-block-8 wrapper */
+.scoreBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 4px 10px;
+  min-width: 54px;
+}
+
+/* .charts-ranking-box (default = green) */
+.score_green { background-color: #71f5b6; }
+
+/* .grey-ranking-box */
+.score_grey { background-color: var(--surface-0); }
+
+/* .red-ranking-box */
+.score_red { background-color: var(--red-01); }
+
+/* .text-04-bold */
+.scoreText {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3c3f4c; /* charcoal — default for green badge */
+  font-family: var(--font-body);
+}
+
+/* .white class — for grey/red badges */
+.scoreTextWhite { color: var(--text); }

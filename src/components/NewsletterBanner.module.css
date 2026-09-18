@@ -1,0 +1,182 @@
+/* .section-primary-02 */
+.section {
+  padding: 24px 0;
+  background: var(--surface-01);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5.5em;
+}
+
+@media (max-width: 1024px) { .inner { padding: 0 2em; } }
+@media (max-width: 640px) { .inner { padding: 0 1em; } }
+
+/* .card-banner inside .div-internal.large-cards.vertical.banner */
+.cardBanner {
+  position: relative;
+  background-color: var(--surface-02); /* #1d1e22 — darker than section so card stands out */
+  border: 1.25px solid var(--surface-03);
+  border-radius: 16px;
+  padding: 56px 32px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-image: url('https://assets-global.website-files.com/650d3012c61d88c6395cfe59/650e46abaf60364ad96d8cd6_background.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* .text-01-primary-16px.align-centre */
+.sub {
+  font-size: 16px;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  font-weight: 400;
+  text-align: center;
+}
+
+/* .h1-large.centred */
+.heading {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+/* .div-enter-email */
+.formWrap {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .form-container-centred */
+.form {
+  width: 100%;
+}
+
+/* .div-subscribe-button-container-v2 */
+.inputRow {
+  display: flex;
+  align-items: center;
+  background: var(--surface-03);
+  border-radius: 100px;
+  border: 1.25px solid var(--border);
+  overflow: hidden;
+  width: 100%;
+}
+
+/* .textfield-medium */
+.input {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 13px 20px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  min-width: 0;
+  font-family: var(--font-body);
+}
+
+.input::placeholder { color: var(--text-subdued); }
+
+/* .button-submit-v2.allingment-centred */
+.submitBtn {
+  background-color: var(--red-01);
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 5px;
+  flex-shrink: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.submitBtn:hover { background-color: var(--red-02); }
+
+/* .success-message — .layout-left-right */
+.successMsg {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface-03);
+  border-radius: 100px;
+  padding: 10px 20px;
+  border: 1.25px solid var(--border);
+}
+
+.successText {
+  font-size: 14px;
+  color: var(--text);
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+/* .button-refresh */
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* .image-20px-square */
+.refreshIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* .error-message — .div-error-state */
+.errorMsg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-03);
+  border-radius: 100px;
+  padding: 10px 20px;
+  border: 1.25px solid var(--border);
+}
+
+/* .div-error-icon */
+.errorIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--red-01);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-body);
+}
+
+.errorText {
+  font-size: 14px;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+@media (max-width: 640px) {
+  .cardBanner { padding: 40px 20px; }
+}

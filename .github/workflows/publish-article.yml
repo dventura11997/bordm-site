@@ -1,0 +1,49 @@
+name: Publish article
+
+on:
+  schedule:
+    - cron: '0 21 */3 * *'   # every 3rd day, ~7-8am Melbourne time
+  workflow_dispatch:          # manual trigger via Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout bordm-site
+        uses: actions/checkout@v4
+
+      - name: Checkout bordm-blog-agent
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/bordm-blog-agent
+          path: bordm-blog-agent
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install site deps
+        run: npm ci
+
+      - name: Install agent deps
+        run: npm ci
+        working-directory: bordm-blog-agent
+
+      - name: Run publish agent
+        run: node bordm-blog-agent/automation/publish.mjs
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL:   ${{ secrets.OPENAI_MODEL }}
+          Z_API_KEY:      ${{ secrets.Z_API_KEY }}
+          SITE_ROOT:      ${{ github.workspace }}
+
+      - name: Commit and push new article
+        run: |
+          git config user.name  "bordmmm-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/content/articles automation/published.json
+          git diff --staged --quiet || git commit -m "chore: publish article"
+          git push

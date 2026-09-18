@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Exact values from bordmmm Webflow CSS */
+  --surface-0: #3c3f4c;
+  --surface-01: #2d2f38;
+  --surface-02: #1d1e22;
+  --surface-03: #040405;
+  --red-01: #e7335e;
+  --red-02: #ff4e78;
+  --brand-blue: #5ad5e3;
+  --text: #ffffff;
+  --text-subdued: rgba(255, 255, 255, 0.65);
+  --border: #1d1e22;
+  --font-body: 'Lato', sans-serif;
+  --font-heading: 'Maven Pro', sans-serif;
+}
+
+/* Webflow fluid font-size: scales with viewport, clamped min/max */
+html, body { font-size: 1.1111111111111112vw; }
+@media screen and (min-width: 1300px) { html, body { font-size: 17.333333333333332px; } }
+@media screen and (max-width: 990px) { html, body { font-size: 11px; } }
+
+body {
+  font-family: var(--font-body);
+  background: var(--surface-01);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: inherit; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+ul, ol { list-style: none; }
+input { font-family: inherit; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--surface-03); }
+::-webkit-scrollbar-thumb { background: var(--surface-0); border-radius: 3px; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

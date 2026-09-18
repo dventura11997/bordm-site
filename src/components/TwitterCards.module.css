@@ -1,0 +1,160 @@
+/* .div-mobil-notifications */
+.wrapper {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  padding-bottom: 25px;
+}
+
+/* .heading-slider-v1 — hidden on desktop */
+.mobileHeading {
+  display: none;
+  margin-bottom: 15px;
+  margin-left: 5.5em;
+}
+
+.mobileHeadingText {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.25em;
+}
+
+@media (max-width: 768px) {
+  .mobileHeading { display: block; }
+}
+
+/* .header-global-slide-div */
+.slideDiv {
+  justify-content: space-between;
+  padding-left: 0;
+  display: flex;
+  position: relative;
+}
+
+/* .grid-primary-slider-v2 — 3-col grid: padding | content | padding */
+.slideGrid {
+  display: grid;
+  grid-template-columns:
+    max(5.5em, calc((100% - 1300px) / 2 + 5.5em))
+    1fr
+    max(5.5em, calc((100% - 1300px) / 2 + 5.5em));
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .slideGrid { grid-template-columns: 2em 1fr 2em; }
+}
+
+@media (max-width: 640px) {
+  .slideGrid { grid-template-columns: 1em 1fr 1em; }
+}
+
+/* invisible padding columns that clip the scroll */
+.padCol {}
+
+/* .slider-container-02 — horizontally scrollable flex row */
+.track {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.track::-webkit-scrollbar { display: none; }
+
+/* .div-notifications + .link-notifications */
+.card {
+  /* exact values from site CSS */
+  border: 1.25px solid var(--surface-03); /* #040405 */
+  background-color: var(--surface-02);    /* #1d1e22 */
+  border-radius: 15px;
+  flex-direction: column;
+  min-width: 317.5px;
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+  display: flex;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.card:hover {
+  border-color: var(--surface-0);
+  color: inherit;
+}
+
+/* top row: name+badge | count+trend */
+/* .layout-horizontal-child.align-top.justify-split-horizontal */
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+/* .layout-horizontal-grandchild */
+.nameGroup {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* .text-02-secondary-14px */
+.accountName {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25em;
+  white-space: nowrap;
+}
+
+/* .image-15px-square */
+.verifiedBadge {
+  width: 15px;
+  height: 15px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* .layout-horizontal-cousin */
+.countGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* .h5-medium */
+.followers {
+  color: #73f5b6; /* exact value from site CSS */
+  font-size: 1em;
+  font-weight: 700;
+  font-family: var(--font-body);
+}
+
+/* .image-20px-square */
+.trendIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* .text-03-tertiary-12px.regular.subdued */
+.tweetText {
+  color: var(--text-subdued); /* rgba(255,255,255,.65) */
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+}

@@ -1,0 +1,158 @@
+/* .section-primary.margin-50px */
+.section {
+  background: var(--surface-01);
+  margin-top: 50px;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5.5em;
+}
+
+@media (max-width: 1024px) { .inner { padding: 0 2em; } }
+@media (max-width: 640px)  { .inner { padding: 0 1em; } }
+
+/* .div-footer — single vertical column */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+/* .main-brand — logo link */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+/* .logo-primary — icon svg */
+.logoIcon {
+  height: 28px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* .image-bordm-font-logo — wordmark */
+.logoText {
+  height: 1.4rem;
+  width: auto;
+  display: block;
+}
+
+/* .text-03-tertiary-12px.regular.subdued — disclaimer */
+.disclaimer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.disclaimer p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* .layout-horizontal-grandchild.wrap — policy links */
+.policyRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* .link-breadcrumbs.subdued */
+.policyLink {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  transition: color 0.25s;
+}
+
+.policyLink:hover { color: var(--text); }
+
+/* .text-02-secondary-14px.subdued — "/" separator */
+.policySep {
+  font-size: 14px;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+}
+
+/* .divider-dark-01.subdued */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* .layout-horizontal-child — social icons row */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .button-wrapper-01 */
+.iconWrap {
+  display: flex;
+}
+
+/* .button-01-secondary.v2 — square icon button */
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1.25px solid var(--surface-03);
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.iconBtn:hover { border-color: var(--text-subdued); }
+
+/* .image-20px-square */
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* .layout-links-parent — ©Bordmmm | English (AUS) */
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* .text-03-tertiary-12px.regular.subdued */
+.copy,
+.lang {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+}
+
+.devLink {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-subdued);
+  font-family: var(--font-body);
+  text-decoration: none;
+  margin-left: auto;
+  transition: color 0.2s;
+}
+
+.devLink:hover { color: var(--text); }
