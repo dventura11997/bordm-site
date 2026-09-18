@@ -7,8 +7,9 @@ import styles from './ArticlesPage.module.css';
 const CDN  = 'https://cdn.prod.website-files.com/650d3012c61d88c6395cfe59/';
 const CDN2 = 'https://cdn.prod.website-files.com/650e88099aad1a83c37df57d/';
 
-const ARTICLES_ICON = CDN  + '655c24f47a207e6da70e2ddd_Group%2078.png';
-const STAR_ICON     = CDN  + '652659ab489f6cb49463fa84_star.svg';
+const ARTICLES_ICON  = CDN  + '655c24f47a207e6da70e2ddd_Group%2078.png';
+const STAR_ICON      = CDN  + '652659ab489f6cb49463fa84_star.svg';
+const BORDMMM_ICON   = CDN2 + '65713f65feba2a48bf1bfe80_bordmmm.png';
 
 const FILTERS = [
   { tag: 'News',     icon: CDN2 + '652627ae0286b7e39f7daf00_speakerphone.svg' },
@@ -124,11 +125,15 @@ export default function ArticlesPage() {
                         </span>
                       </div>
                     </div>
-                    {article.heroImage ? (
-                      <div className={styles.cardHero} style={{ backgroundImage: `url("${article.heroImage}")` }} />
-                    ) : (
-                      <div className={styles.cardHero} style={{ background: slugGradient(article.slug) }} />
-                    )}
+                    <div className={styles.cardHero}>
+                      <img
+                        src={article.heroImage || BORDMMM_ICON}
+                        alt={article.title}
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        onError={(e) => { (e.currentTarget as HTMLImageElement).src = BORDMMM_ICON; }}
+                      />
+                    </div>
                   </Link>
                 ))}
               </div>
