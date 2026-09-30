@@ -20,7 +20,6 @@ jobs:
         with:
           repository: ${{ github.repository_owner }}/bordm-blog-agent
           path: bordm-blog-agent
-          token: ${{ secrets.BOT_PAT }}
 
       - uses: actions/setup-node@v4
         with:
