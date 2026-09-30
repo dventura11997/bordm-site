@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { articleListings, slugGradient } from '../data/articleLoader';
+import { articleListings } from '../data/articleLoader';
 import Footer from '../components/Footer';
 import styles from './ArticlesPage.module.css';
 
