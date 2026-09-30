@@ -319,9 +319,15 @@
   min-height: 110px;
   flex-shrink: 0;
   border-radius: 8px;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   align-self: stretch;
+}
+
+.cardHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ── Right panel (popular series) ── */
