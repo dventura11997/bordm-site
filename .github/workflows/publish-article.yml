@@ -2,7 +2,7 @@ name: Publish article
 
 on:
   schedule:
-    - cron: '0 21 * * 0'    # every Sunday 9pm UTC = ~7am Monday Melbourne time
+    - cron: '0 21 5,19 * *'    # 5th and 19th of each month, 9pm UTC = ~7am Melbourne time
   workflow_dispatch:          # manual trigger via Actions tab
 
 permissions:
